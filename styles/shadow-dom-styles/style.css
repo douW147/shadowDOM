@@ -1,0 +1,40 @@
+@import url("../reset.css");
+
+:host {
+    --border: #000;
+}
+
+.countries {
+    padding: 0 2%;
+    text-align: center;
+    margin: auto;
+    border: 1px solid var(--border);
+    width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.countries-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center; 
+    margin: 4% 0;
+}
+
+.countries-row__country-image-container{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.country-row__country-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+img {
+    width: 100%;
+}

@@ -1,3 +1,5 @@
+"use strict"
+
 const countries = [
     {
         title: "United States",
@@ -17,8 +19,13 @@ const countries = [
     },
     {
         title: "Bulgaria",
-        img: '<img src="https://countryflagsapi.com/png/bg" alt="Bulgaria flag/>'
+        img: '<img src="https://countryflagsapi.com/png/bg" alt="Bulgaria flag"/>'
     },
 ];
+
+export const imageContainerClass = "countries-row__country-image-container";
+export const countrieTitleClass = "country-row__country-title";
+export const countriesRowClass = "countries-row";
+export const countriesContainerClass = "countries";
 
 export default countries;

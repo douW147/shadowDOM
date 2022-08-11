@@ -1,7 +1,11 @@
+"use strict"
+
+import {countrieTitleClass} from "../constants/constants.js"
+
 function createCountryTitle(title) {
     const countryTitleHtml = document.createElement("h1");
 
-    countryTitleHtml.setAttribute("class", "country-row__country-title");
+    countryTitleHtml.setAttribute("class", countrieTitleClass);
     countryTitleHtml.innerHTML = title;
 
     return countryTitleHtml;

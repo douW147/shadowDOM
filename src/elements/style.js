@@ -1,3 +1,5 @@
+"use strict"
+
 function createStyleLink(href) {
     const styleLinkHtml = document.createElement("link");
 

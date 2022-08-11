@@ -1,7 +1,12 @@
-function createCountryImage() {
+"use strict"
+
+import {imageContainerClass} from "../constants/constants.js"
+
+function createCountryImage(img) {
     const countryImageHtml = document.createElement("div");
 
-    countryImageHtml.setAttribute("class", "country-row__country-image");
+    countryImageHtml.setAttribute("class", imageContainerClass);
+    countryImageHtml.innerHTML = img;
 
     return countryImageHtml;
 }

@@ -1,32 +1,34 @@
+"use strict"
+
 import createCountryImage from "./elements/country-image.js";
 import createCountryTitle from "./elements/country-title.js";
 import createRow from "./elements/row.js";
 import createStyleLink from "./elements/style.js"
 
-import countries from "./constants/constants.js";
+import countries, {countriesContainerClass} from "./constants/constants.js";
 
-const shadowRootElementId = "shadow-host";
-const shadowRoot = document.getElementById(shadowRootElementId);
-shadowRoot.attachShadow({mode: "open"});
+class ShadowElement extends HTMLElement {
+    constructor() {
+        super();
 
-const styleHtml = createStyleLink("../styles/shadow-styles/style.css");
-shadowRoot.appendChild(styleHtml);
+        const shadow = this.attachShadow({mode: 'open'});
 
-const template = document.createElement("template");
-shadowRoot.appendChild(template);
+        const style = createStyleLink("./styles/shadow-dom-styles/style.css")
+        shadow.appendChild(style);
 
-countries.forEach(countrie => {
-    const countrieTitleHTml = createCountryTitle(countrie.title);
-    const countrieImageHtml = createCountryImage();
-    const rowHtml = createRow();
+        const countriesContainer = document.createElement('div');
+        countriesContainer.setAttribute('class', countriesContainerClass)
 
-    countrieImageHtml.innerHTML = countrie.img;
-    
-    rowHtml.appendChild(countrieTitleHTml);
-    rowHtml.appendChild(countrieImageHtml);
-    
-    template.appendChild(rowHtml);
-});
+        countries.forEach(countrie => {
+            const title = createCountryTitle(countrie.title);
+            const image = createCountryImage(countrie.img);
+            const row = createRow(image, title);
 
-shadowRoot.innerHTML ="kjfnkjrjgr";
+            countriesContainer.appendChild(row);
+        });  
 
+        shadow.appendChild(countriesContainer);
+    }
+}
+
+customElements.define('shadow-host', ShadowElement)
