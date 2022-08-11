@@ -1,0 +1,11 @@
+@import url("../reset.css");
+
+:root {
+    --border: #000;
+}
+
+.shadow-host {
+    margin: 5%;
+    text-align: center;
+    border: 1px solid var(--border);
+}
