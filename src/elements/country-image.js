@@ -2,13 +2,13 @@
 
 import {imageContainerClass} from "../constants/constants.js"
 
-function createCountryImage(img) {
-    const countryImageHtml = document.createElement("div");
+function createselectImage(img) {
+    const selectImageHtml = document.createElement("div");
 
-    countryImageHtml.setAttribute("class", imageContainerClass);
-    countryImageHtml.innerHTML = img;
+    selectImageHtml.setAttribute("class", imageContainerClass);
+    selectImageHtml.innerHTML = img;
 
-    return countryImageHtml;
+    return selectImageHtml;
 }
 
-export default createCountryImage;
+export default createselectImage;

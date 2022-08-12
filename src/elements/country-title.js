@@ -1,14 +1,14 @@
 "use strict"
 
-import {countrieTitleClass} from "../constants/constants.js"
+import {selectTitleClass} from "../constants/constants.js"
 
-function createCountryTitle(title) {
-    const countryTitleHtml = document.createElement("h1");
+function createselectTitle(title) {
+    const selectTitleHtml = document.createElement("h1");
 
-    countryTitleHtml.setAttribute("class", countrieTitleClass);
-    countryTitleHtml.innerHTML = title;
+    selectTitleHtml.setAttribute("class", selectTitleClass);
+    selectTitleHtml.innerHTML = title;
 
-    return countryTitleHtml;
+    return selectTitleHtml;
 }
 
-export default createCountryTitle;
+export default createselectTitle;

@@ -1,15 +1,15 @@
 "use strict"
 
-import {countriesRowClass} from "../constants/constants.js"
+import {selectRowClass} from "../constants/constants.js"
 
-function createRow(countryImageElement, countryTitleElement) {
-    const countryRowHtml = document.createElement("div");
+function createRow(selectImageElement, selectTitleElement) {
+    const selectRowHtml = document.createElement("div");
 
-    countryRowHtml.setAttribute("class", countriesRowClass);
-    countryRowHtml.appendChild(countryTitleElement);
-    countryRowHtml.appendChild(countryImageElement);
+    selectRowHtml.setAttribute("class", selectRowClass);
+    selectRowHtml.appendChild(selectTitleElement);
+    selectRowHtml.appendChild(selectImageElement);
 
-    return countryRowHtml;
+    return selectRowHtml;
 }
 
 export default createRow;
