@@ -36,7 +36,7 @@ export const selectBodyClass = "select";
 export const mainSelectOptionClass = "select__main-select-row";
 export const selectOptionsListClass = "select__select-options-list"; 
 export const selectOptionsListDisableClass = "select__select-options-list select__select-options-list_disable"; 
-export const mainSelectOptionRowContainerClass = "select__select-row select_select-row_main";
+export const mainSelectOptionRowContainerClass = "select__select-row select__select-row_main";
 
 export const fontAwesomeCDN = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />';
 
